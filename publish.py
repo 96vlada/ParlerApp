@@ -92,13 +92,15 @@ class PublishFeed:
 					continue
 				
 				time.sleep(2)
-				driver.find_elements_by_xpath('//ul[@class="sidebar__menu"]/li/a')[1].click()
-				time.sleep(3)
-				driver.find_element_by_xpath('//div[@class="input-trigger"]').click()
-				time.sleep(2)
+				# driver.find_elements_by_xpath('//ul[@class="sidebar__menu"]/li/a')[1].click()
+				# time.sleep(3)
+				# driver.find_element_by_xpath('//div[@class="input-trigger"]').click()
 
-				driver.find_element(By.XPATH, '//div[@class="emoji-wysiwyg-editor"]').clear()
-				time.sleep(2)
+				# driver.find_element_by_xpath('//textarea[@class="modal__parley-input"]').click()
+				# time.sleep(2)
+
+				# driver.find_element(By.XPATH, '//div[@class="emoji-wysiwyg-editor"]').clear()
+				# time.sleep(2)
 				entry = feedForPublish.entries[i]
 
 				if(len(entry.title) > 80):
@@ -106,11 +108,11 @@ class PublishFeed:
 				else:
 					title_entry = entry.title
 
-				send_keys_delay(driver.find_element(By.XPATH, '//div[@class="emoji-wysiwyg-editor"]'), title_entry)
+				send_keys_delay(driver.find_element(By.XPATH, '//textarea[@class="modal__parley-input"]'), title_entry)
 				time.sleep(1)
-				driver.find_element(By.XPATH, '//div[@class="emoji-wysiwyg-editor"]').send_keys(Keys.ENTER)
+				driver.find_element(By.XPATH, '//textarea[@class="modal__parley-input"]').send_keys(Keys.ENTER)
 				time.sleep(1)
-				driver.find_element(By.XPATH, '//div[@class="emoji-wysiwyg-editor"]').send_keys(Keys.ENTER)
+				driver.find_element(By.XPATH, '//textarea[@class="modal__parley-input"]').send_keys(Keys.ENTER)
 				time.sleep(1)
 
 				#########################################################################
@@ -156,10 +158,10 @@ class PublishFeed:
 					
 				# #############################################################################
 
-				driver.find_element(By.XPATH, '//div[@class="emoji-wysiwyg-editor"]').send_keys(clean_data_without_img)
+				driver.find_element(By.XPATH, '//textarea[@class="modal__parley-input"]').send_keys(clean_data_without_img)
 				time.sleep(1)
 
-				driver.find_element_by_xpath('//div[@class="modal__footer"]/button[@type="submit"]').click()
+				driver.find_element(By.XPATH, '//div[@class="modal__footer"]/button[@type="button"]').click()
 
 				time.sleep(3)
 

@@ -28,7 +28,7 @@ UnfollowExcCredRow  = MainDB.unfollowCred()
 UnfDaysCredRow      = MainDB.unFollowDays()
 
 window = tk.Tk()
-window.wm_iconbitmap('code.ico')
+# window.wm_iconbitmap('code.ico')
 window.geometry('565x980+50+10')
 
 window.title("ParlerApp");

@@ -340,7 +340,7 @@ class SettingsPage():
 		print(unfollowArr)
 
 		# publishArr = self.createCronJobForModule(str(self.publishModuleCron.get('1.0', 'end-1c')).split(","), [[29,32]])
-		publishArr = self.createCronJobForModule(str(self.publishModuleCron.get('1.0', 'end-1c')).split(","), [[8,8]])
+		publishArr = self.createCronJobForModule(str(self.publishModuleCron.get('1.0', 'end-1c')).split(","), [[58,58]])
 
 		print("Publish Module Time")
 		print(publishArr)
@@ -498,7 +498,6 @@ class SettingsPage():
 		# unfollowArr = self.createCronJobForModule(str(self.unfollowModuleCron.get('1.0', 'end-1c')).split(","), [[17,25],[30,37]])
 		# publishArr = self.createCronJobForModule(str(self.publishModuleCron.get('1.0', 'end-1c')).split(","), [[29,32],[55,59]])
 		publishArr = self.createCronJobForModule(str(self.publishModuleCron.get('1.0', 'end-1c')).split(","), [[16,16],[15,20]])
-
 		print("Publish Module Time")
 		print(publishArr)
 
